@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS universidad;
-CREATE DATABASE universidad CHARACTER SET utf8mb4;
-USE universidad;
+DROP DATABASE IF EXISTS universidad_recu_ud3;
+CREATE DATABASE universidad_recu_ud3 CHARACTER SET utf8mb4;
+USE universidad_recu_ud3;
 
 CREATE TABLE departamento (
                               id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

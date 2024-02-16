@@ -133,3 +133,6 @@ INSERT INTO asignatura VALUES (80, 'Biotecnología vegetal', 6, 'obligatoria', 3
 INSERT INTO asignatura VALUES (81, 'Genómica y proteómica', 4.5, 'obligatoria', 3, 2, NULL);
 INSERT INTO asignatura VALUES (82, 'Procesos biotecnológicos', 6, 'obligatoria', 3, 2, NULL);
 INSERT INTO asignatura VALUES (83, 'Técnicas instrumentales avanzadas', 4.5, 'obligatoria', 3, 2, NULL);
+#he añadido este dato con una asignatura impartida por un catedrático
+INSERT INTO asignatura VALUES (84, 'Métodos instrumentales cuantitativs', 4.5, 'obligatoria', 3, 2, 8);
+

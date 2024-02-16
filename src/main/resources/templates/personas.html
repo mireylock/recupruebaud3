@@ -1,0 +1,81 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<h1 class="row justify-content-center mt-3 mb-3" th:text="Personas"></h1>
+
+<form th:action="@{/personas/crear}" class="row justify-content-center mb-3">
+    <input type="submit" value="Crear" class="btn btn-success">
+</form>
+
+    <!-- Conteos -->
+    <div class="row mt-1 mb-2">
+        <div class="col-md-2 align-self-center h6" >Conteo profesores</div>
+        <div class="col-md-1 align-self-center h6" th:text="${conteoProfes}"></div>
+    </div>
+
+    <div class="row mt-1 mb-2">
+        <div class="col-md-2 align-self-center h6" >Conteo asignaturas de catedráticos</div>
+        <div class="col-md-1 align-self-center h6" th:text="${conteoAsigCat}">hola?</div>
+    </div>
+
+
+<div class="container-fluid mt-2">
+    <div class="row mt-1 mb-2 font-weight-bold bg-dark text-white">
+        <div class="col-md-1 align-self-center h6" >Id</div>
+        <div class="col-md-1 align-self-center h6" >NIF</div>
+        <div class="col-md-1 align-self-center h6" >Nombre</div>
+        <div class="col-md-1 align-self-center h6" >Apellido1</div>
+        <div class="col-md-1 align-self-center h6" >Apellido2</div>
+        <div class="col-md-1 align-self-center h6" >Ciudad</div>
+        <div class="col-md-1 align-self-center h6" >Direccion</div>
+        <div class="col-md-1 align-self-center h6" >Telefono</div>
+        <div class="col-md-1 align-self-center h6" >Fecha nacimiento</div>
+        <div class="col-md-1 align-self-center h6" >Tipo</div>
+        <div class="col-md-1 align-self-center h6" >Departamento</div>
+
+    </div>
+
+    <div class="row mb-3" th:each="persona : ${listaPersonas}">
+        <div th:text="${persona.id}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.nif}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.nombre}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.apellido1}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.apellido2}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.ciudad}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.direccion}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.telefono}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.fecha_nacimiento}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.tipo}" class="col-md-1 align-self-center"></div>
+        <div th:text="${persona.departamento.getNombre()}" class="col-md-1 align-self-center"></div>
+
+
+        <div class="col align-self-center text-center">
+            <form class="d-inline">
+                <input type="submit" value="Ver Detalle" class="btn btn-primary"/>
+            </form>
+
+            <form class="d-inline">
+                <input type="submit" value="Editar" class="btn btn-info"/>
+            </form>
+
+            <form class="d-inline" >
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</script>
+
+</body>
+</html>
